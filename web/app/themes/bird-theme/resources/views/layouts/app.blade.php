@@ -4,14 +4,17 @@
 
 @include('sections.header')
 
-  <main id="main" class="main">
-    @yield('content')
-  </main>
+  <div class="container">
+    <main id="main" class="main">
+      @yield('content')
+    </main>
 
-  @hasSection('sidebar')
     <aside class="sidebar">
-      @yield('sidebar')
+      {!! get_search_form(false) !!}
+      @php(dynamic_sidebar('sidebar-primary'))
     </aside>
-  @endif
+</div>
 
-@include('sections.footer')
+<footer class="footer-wrapper">
+  @include('sections.footer')
+</footer>
