@@ -4,10 +4,11 @@
   @include('partials.page-header')
 
   @if (! have_posts())
-    <x-alert type="warning">
-      {!! __('Sorry, but the page you are trying to view does not exist.', 'sage') !!}
+    <x-alert type="warning" class="p-2 mb-1 rounded">
+      {!! __('That page doesn\'t exist.', 'sage') !!}
     </x-alert>
+    <img src="@asset('images/feeder.jpg')">
 
-    {!! get_search_form(false) !!}
+    <!-- {!! get_search_form(false) !!} -->
   @endif
 @endsection
