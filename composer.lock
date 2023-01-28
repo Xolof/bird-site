@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbe06164a1e6dbe824a3390b5d55e985",
+    "content-hash": "e314a7c32620ef9fb257f645c9a6523c",
     "packages": [
         {
             "name": "brick/math",
@@ -4707,6 +4707,24 @@
                 }
             ],
             "time": "2022-01-24T18:55:24+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/forminator",
+            "version": "1.22.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/forminator/",
+                "reference": "tags/1.22.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/forminator.1.22.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/forminator/"
         },
         {
             "name": "wpackagist-theme/twentytwentythree",
