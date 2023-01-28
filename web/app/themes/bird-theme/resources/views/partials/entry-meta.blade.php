@@ -1,3 +1,6 @@
+
+{!! get_the_post_thumbnail() !!}
+
 <time class="updated" datetime="{{ get_post_time('c', true) }}">
   {{ get_the_date() }}
 </time>
