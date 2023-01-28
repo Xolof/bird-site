@@ -1,3 +1,426 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/*
+
+TODO:
+
+Divide the CSS into multiple files
+
+Remove Tailwind
+
+Internationalization
+
+Multisite - Flera språk
+
+*/
+
+:root {
+    --accent-color: #097c2f;
+    --accent-color-dim: #609b74;
+    --border-radius: 4px;
+    --text-color: #1b1b1b;
+    --text-color-dim: #7c7c7c;
+}
+
+@layer base {
+    html {
+        background-color: #ffffff;
+        color: var(--text-color);
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    a {
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+}
+
+@layer components {
+
+    .banner .brand {
+        color: var(--text-color);
+        font-weight: normal;
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+
+    .custom-logo {
+        height: 4rem;
+        width: auto;
+    }
+
+    #main article {
+        margin-bottom: 2.4rem;
+    }
+
+    .entry-title a {
+        color: var(--text-color);
+        font-weight: normal;
+    }
+
+    .entry-content {
+        border-bottom: 2px solid var(--text-color-dim);
+    }
+
+    .entry-content p,
+    main p {
+        margin-bottom: 1.4rem;
+    }
+
+    .byline.author.vcard {
+        margin-bottom: 0;
+    }
+
+    .entry-content img {
+        margin-bottom: 1.4rem;
+        border-radius:var(--border-radius);
+    }
+
+    div.posts-ingress-wrapper article header img {
+        width: 100%;
+    }
+
+    header img {
+        margin-bottom: 0.4rem;
+        border-radius:var(--border-radius);
+    }
+
+    #menu-main {
+        height: 100%;
+        flex: 1;
+    }
+
+    li.menu-item {
+        display: inline-block;
+        height: 100%;
+    }
+
+    .nav-primary .menu-main-container .nav li a {
+        display: block;
+        border-radius:var(--border-radius);
+        border: 1px solid var(--text-color-dim);
+        margin-right: 0.4rem;
+        line-height: 42px;
+        padding: 0 1em;
+    }
+
+    .nav-primary {
+        margin-top: 1.4rem;
+        height: 3rem;
+        transition: opacity 0.2s ease;
+    }
+
+    .nav-primary .menu-main-container,
+    footer.content-info {
+        max-width: 1248px;
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    header.banner {
+        padding: 2.4rem 0.8rem 1.4rem;
+        border-bottom: 2px solid var(--accent-color-dim);
+    }
+
+    .footer-wrapper {
+        border-top: 2px solid var(--text-color-dim);
+        position: relative;
+    }
+
+    aside,
+    .footer-wrapper {
+        padding: 0.8rem;
+    }
+
+    main {
+        padding: 1.4rem 0.8rem;
+    }
+
+    aside,
+    header,
+    .widget_search {
+        padding-bottom: 1.4rem;
+    }
+
+    .footer-wrapper {
+        padding: 2rem 0.8rem;
+    }
+
+    .search-form {
+        margin-bottom: 1.4rem;
+    }
+
+    .search-form input {
+        padding: 0.4rem;
+        border-radius:var(--border-radius);
+        margin-right: 0.2rem;
+    }
+
+    .search-form button,
+    input#submit.submit {
+        padding: 0.4rem;
+        border-radius:var(--border-radius);
+        color: var(--accent-color);
+        font-weight: bold;
+        border: 1px solid var(--text-color-dim);
+        width: 100%;
+    }
+
+    .nav-primary .menu-main-container .nav li a,
+    .search-form button,
+    input#submit.submit {
+        transition: all 0.3s ease;
+    }
+
+    .nav-primary .menu-main-container .nav li a:hover,
+    .search-form button:hover,
+    input#submit.submit:hover
+    {
+        color:#f0f0f0;
+        background-color: var(--accent-color);
+    }
+
+    input#submit.submit {
+        margin-top: 0.4rem;
+        cursor: pointer;
+    }
+
+    figcaption.wp-element-caption,
+    .updated,
+    .byline {
+        color: var(--text-color-dim);
+    }
+
+    .next-prev-links {
+        margin-top: 1.4rem;
+    }
+
+    .prev-link,
+    .next-link {
+        display: inline;
+    }
+
+    .next-link {
+        float: right;
+    }
+
+    section#comments.comments {
+        padding-top: 1.4rem;
+    }
+
+    section#comments.comments h2 {
+        padding-bottom: 1.4rem;
+    }
+
+    #commentform input#author,
+    #commentform input#email,
+    #commentform input#url,
+    #commentform textarea#comment {
+        padding: 0.4rem;
+        width: 100%;
+        margin-bottom: 0.4rem;
+        border-radius:var(--border-radius);
+        border: 1px solid #ccc;
+    }
+
+    .search-form {
+        display: flex;
+        justify-content: space-between;
+        input[type=search] {
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        label {
+            width: 64%;
+        }
+
+        button {
+            width: 34%;
+        }
+    }
+
+    #commentform p {
+        margin-bottom: 0;
+    }
+
+    #reply-title {
+        font-size: 2rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .comment-author.vcard img.avatar {
+        padding-bottom: 0.4rem;
+    }
+
+    #menu-main,
+    footer.content-info {
+        padding: 0;
+    }
+
+    img.footer-image {
+        height: 8rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -100;
+    }
+
+    .posts-ingress-wrapper {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+
+    .posts-ingress-wrapper article {
+        width: 48%;
+    }
+
+    section.widget div ul li {
+        margin-bottom: 1em;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .navCloseButton {
+        display: none;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @media (min-width: 1248px) {
+        #menu-main,
+        footer.content-info {
+            padding: 0 0.8rem;
+        }
+    }
+
+    @media (min-width: 800px) {
+        div.container {
+            display: flex;
+            max-width: 1248px;
+            margin: 0 auto;
+        }
+
+        #main.main {
+            width: 64%;
+        }
+
+        aside {
+            margin-top: 1rem;
+            padding-left: 2.4rem;
+            width: 36%;
+        }
+    }
+
+    @media (max-width: 764px) {
+        .posts-ingress-wrapper article {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .banner .brand {
+            font-size: 3rem;
+        }
+
+        #hamburger {
+            display: block;
+            width: 3rem;
+            height: 3rem;
+            margin: 0 auto;
+            margin-top: 0.5rem;
+            cursor: pointer;
+        }
+
+        #hamburger .bar-1,
+        #hamburger .bar-2,
+        #hamburger .bar-3,
+        .navCloseButton .bar-1,
+        .navCloseButton .bar-2 {
+            width: 100%;
+            height: 20%;
+            background: #000;
+            border-radius: 4px;
+        }
+
+        #hamburger .bar-2,
+        #hamburger .bar-3 {
+            margin-top: 20%;
+        }
+
+        .nav-primary .menu-main-container .nav li a {
+            border: none;
+            border-radius: 0;
+            font-size: 2rem;
+        }
+
+
+        .navCloseButton {
+            display: block;
+            cursor: pointer;
+        }
+
+        .navCloseButton .bar-1,
+        .navCloseButton .bar-2 {
+            position: absolute;
+            top: 50%;
+        }
+
+        .navCloseButton .bar-1 {
+            transform: rotate(-45deg);
+        }
+
+        .navCloseButton .bar-2 {
+            transform: rotate(45deg);
+        }
+
+        .nav-primary {
+            margin: 0;
+            opacity: 0;
+            z-index: -500;
+            height: 0;
+            position: relative;
+        }
+
+        #menu-main {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .nav-primary.visible {
+            z-index: 100;
+            opacity: 1;
+            background-color: #ffffff;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+}
+
