@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e314a7c32620ef9fb257f645c9a6523c",
+    "content-hash": "6d66c94f82fdf5c66afd52e46f50aa02",
     "packages": [
         {
             "name": "brick/math",
@@ -4725,6 +4725,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/forminator/"
+        },
+        {
+            "name": "wpackagist-plugin/wps-hide-login",
+            "version": "1.9.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wps-hide-login/",
+                "reference": "tags/1.9.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wps-hide-login.1.9.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wps-hide-login/"
         },
         {
             "name": "wpackagist-theme/twentytwentythree",
